@@ -1,0 +1,50 @@
+Assignment 1
+
+1. Describe deposit, branch from deposit table.
+· desc deposit;
+2. Describe borrow, customers tables.
+· desc borrow
+· desc customers 
+3. List all data from table DEPOSIT.
+·  select * from DEPOSIT;
+4. List all data from table BORROW.
+·  select * from BORROW;
+5. List all data from table CUSTOMERS.
+·  select * from CUSTOMERS;
+6. List all data from table BRANCH.
+· select * from BRANCH;
+7. Give account no and amount of depositors.
+· select actno,amount from deposit;
+8. Give name of depositors having amount greater than Rs. 4000.
+· select actno,amount from deposit where amount>4000;
+9. Give name of customers who opened account after date '01-DEC-96'.
+·  select cname from deposit where adate>'01-DEC-96';
+10.List all the customers from Bombay city.
+·  select * from customers where city='BOMBAY';
+
+Assignment 2
+
+1 Create above Table name as item_master.
+· create tbale item_master(id varchar2(2),name char(20),type char(20),price number(15),quality char(15),Item_pack_date date);
+2 Insert Data shown in table.
+· insert into item_master values('&id','&name','&type',&price,'&quality','&Item_pack_date');
+3 Select information about price,quality and item_pack_date of the item.
+·select price,quality,Item_pack_date from item_master;
+4 Display information about item.
+· select * from item_master;
+5 Sort the item by its quality.
+· select * from item_master order by quality;
+6 Display quality from table with distinct values.
+select distinct quality from item_master;
+7 Change the quality of item from Good to Verygood.
+· update item_master set quality='verygood' where id='I5'
+8 Display item having quality Verygood.
+· select * from item_master where quality='verygood';
+9 Add new columns item_pur_date into table.
+· alter table item_master add (item_pur_date  date);
+10 Display all information of items having price more than Rs. 500.
+· select * from item_master where price>500;
+11 Delete the item having price of Rs. 50.
+· delete from item_master where price=50;
+12 Rename table from person to Item_detail.
+· rename item_master to item_detil

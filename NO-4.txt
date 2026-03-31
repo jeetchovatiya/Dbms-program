@@ -1,0 +1,25 @@
+1. Create above Table name as Person.
+·  create table Person(Person_Id number(2),Fname char(15),Lname char(15),city char(20),Salary number(10));
+2. Insert data shown in table.
+·  insert into person values(&PERSON_ID,'&fname','&lname','&city',&salary);
+3. Select information about Person_Id, Fname of the person.
+·  select Person_Id,Fname from person;
+4. Display the list of person.
+· select Fname,Lname from person;
+5. Sort the person by salary.
+·  select * from person order by salary;
+· select * from person order by salary desc;
+6. Display city from table with distinct values.
+·  select distinct city from person;
+7. Change the city of sandip from pune to kolkata.
+· update person set city='kolkata' where fname='Sandip';
+8. Display person whose Lname is “Prajapati‟.
+· select fname from person where lname='Prajapati';
+9. Add new columns state, Birthdate and pincode into table.
+·  alter table person add(state char(15),Birthdate  date,pincode  number(10));
+10.Display all information of person having salary more than 6000.
+· select * from person where salary>6000;
+11.Delete the person having salary less than 3000.
+·  delete from person where salary<3000;
+12.Rename table from person to person_master.
+·  rename person to person_master;
